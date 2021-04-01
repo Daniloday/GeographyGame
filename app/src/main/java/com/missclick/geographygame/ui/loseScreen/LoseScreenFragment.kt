@@ -1,4 +1,4 @@
-package com.missclick.geographygame.ui.mainScreen
+package com.missclick.geographygame.ui.loseScreen
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.missclick.geographygame.R
-import com.missclick.geographygame.databinding.FragmentMainScreenBinding
+import com.missclick.geographygame.databinding.FragmentLoseScreenBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,15 +17,14 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [MainScreenFragment.newInstance] factory method to
+ * Use the [LoseScreenFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class MainScreenFragment : Fragment() {
-    val bind by viewBinding(FragmentMainScreenBinding::bind)
+class LoseScreenFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-
+    val bind by viewBinding(FragmentLoseScreenBinding::bind)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -39,22 +38,16 @@ class MainScreenFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main_screen, container, false)
+        return inflater.inflate(R.layout.fragment_lose_screen, container, false)
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        bind.materialButtonWin.setOnClickListener {
-            findNavController().navigate(R.id.action_mainScreenFragment_to_addScreenFragment)
-        }
-        bind.materialButtonLose1.setOnClickListener {
-            findNavController().navigate(R.id.action_mainScreenFragment_to_loseScreenFragment)
-        }
-        bind.materialButtonLose2.setOnClickListener {
-            findNavController().navigate(R.id.action_mainScreenFragment_to_loseScreenFragment)
+        bind.materialRestart.setOnClickListener {
+            findNavController().navigate(R.id.action_loseScreenFragment_to_startGameFragment)
         }
     }
-
     companion object {
         /**
          * Use this factory method to create a new instance of
@@ -62,12 +55,12 @@ class MainScreenFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment MainScreenFragment.
+         * @return A new instance of fragment LoseScreenFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            MainScreenFragment().apply {
+            LoseScreenFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

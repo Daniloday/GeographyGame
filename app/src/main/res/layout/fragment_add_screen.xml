@@ -4,72 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.mainScreen.MainScreenFragment"
+    tools:context=".ui.addScreen.AddScreenFragment"
     android:background="@drawable/backs">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/hello_blank_fragment"
         android:visibility="invisible" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/materialButtonWin"
+        android:id="@+id/materialButtonLose3"
         android:layout_width="164dp"
         android:layout_height="52dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/white"
-        android:text="Анкара"
+        android:text="Швеция"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialButtonLose1" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/materialButtonLose1"
-        android:layout_width="164dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="@color/white"
-        android:text="Анталья"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialButtonLose2" />
+        app:layout_constraintTop_toBottomOf="@+id/materialButtonLose" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="196dp"
-        android:text="Назовите столицу Турции:"
-        android:textSize="26dp"
-        android:textStyle="bold"
+        android:layout_marginTop="140dp"
+        android:text="Правильный ответ!"
         android:textAlignment="center"
         android:textColor="@color/white"
+        android:textSize="26dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView3" />
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Столицей какой страны является Оттава?"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/materialButtonLose2"
+        android:id="@+id/materialButtonWin"
         android:layout_width="164dp"
         android:layout_height="52dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="52dp"
         android:backgroundTint="@color/white"
-        android:text="Стамбул"
+        android:text="Канада"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonLose"
+        android:layout_width="164dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/white"
+        android:text="Норвегия"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialButtonWin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

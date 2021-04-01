@@ -35,5 +35,54 @@
         android:id="@+id/mainScreenFragment"
         android:name="com.missclick.geographygame.ui.mainScreen.MainScreenFragment"
         android:label="fragment_main_screen"
-        tools:layout="@layout/fragment_main_screen" />
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_mainScreenFragment_to_addScreenFragment"
+            app:destination="@id/addScreenFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_loseScreenFragment"
+            app:destination="@id/loseScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loseScreenFragment"
+        android:name="com.missclick.geographygame.ui.loseScreen.LoseScreenFragment"
+        android:label="fragment_lose_screen"
+        tools:layout="@layout/fragment_lose_screen" >
+        <action
+            android:id="@+id/action_loseScreenFragment_to_startGameFragment"
+            app:destination="@id/startGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addScreenFragment"
+        android:name="com.missclick.geographygame.ui.addScreen.AddScreenFragment"
+        android:label="fragment_add_screen"
+        tools:layout="@layout/fragment_add_screen" >
+        <action
+            android:id="@+id/action_addScreenFragment_to_lastScreenFragment"
+            app:destination="@id/lastScreenFragment" />
+        <action
+            android:id="@+id/action_addScreenFragment_to_loseScreenFragment"
+            app:destination="@id/loseScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lastScreenFragment"
+        android:name="com.missclick.geographygame.ui.lastScreen.LastScreenFragment"
+        android:label="fragment_last_screen"
+        tools:layout="@layout/fragment_last_screen" >
+        <action
+            android:id="@+id/action_lastScreenFragment_to_loseScreenFragment"
+            app:destination="@id/loseScreenFragment" />
+        <action
+            android:id="@+id/action_lastScreenFragment_to_victoryScreenFragment"
+            app:destination="@id/victoryScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/victoryScreenFragment"
+        android:name="com.missclick.geographygame.ui.victoryScreen.VictoryScreenFragment"
+        android:label="fragment_victory_screen"
+        tools:layout="@layout/fragment_victory_screen" >
+        <action
+            android:id="@+id/action_victoryScreenFragment_to_startGameFragment"
+            app:destination="@id/startGameFragment" />
+    </fragment>
 </navigation>

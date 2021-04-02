@@ -48,7 +48,7 @@
         android:id="@+id/materialRestart"
         android:layout_width="208dp"
         android:layout_height="82dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="72dp"
         android:backgroundTint="@color/white"
         android:text="Попробовать еще раз!"
         android:textColor="@color/black"
@@ -58,5 +58,26 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_score" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="303dp"
+        android:layout_height="178dp"
+        android:src="@drawable/victory"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialRestart"
+        app:layout_constraintVertical_bias="0.673" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="266dp"
+        android:layout_height="131dp"
+        android:src="@drawable/world_map"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -50,7 +50,7 @@ class VictoryScreenFragment : Fragment() {
         bind.materialRestart.setOnClickListener {
             findNavController().navigate(R.id.action_victoryScreenFragment_to_startGameFragment)
         }
-        bind.textScore.text = screenViewModel.getScore().toString()
+        bind.textScore.text = "И набрали ${screenViewModel.getScore()} очков!"
     }
 
     companion object {
